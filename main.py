@@ -8,9 +8,19 @@ bag = letters + digits + symbols
 
 length = int(input("How long should your password be? "))
 
-password = ""
+Letters = input("yes" or "no")
+Digits = input("yes" or "no")
+Symbols = input("yes" or "no")
 
-for i in range(length):
-    character = random.choice(bag)
-    password = password + character
-print(password)
+if Letters + Digits + Symbols == "yes": 
+
+if length < 8:
+    print("This password is too short to be safe")
+else:
+    password = ""
+    print(password)
+
+    for i in range(length):
+        character = random.choice(bag)
+        password = password + character
+    print(password)
